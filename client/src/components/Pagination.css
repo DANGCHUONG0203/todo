@@ -1,0 +1,44 @@
+/* Pagination.css */
+
+/* Container chính của component Pagination */
+.pagination-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Khoảng cách giữa các phần tử, tương đương gap-2 */
+  margin-top: 1rem; /* Khoảng cách phía trên, tương đương mt-4 */
+  justify-content: center; /* Căn giữa các phần tử */
+  font-family:'Times New Roman', Times, serif; 
+  font-weight: bold; /* Font chữ mặc định */
+}
+
+/* Style cho các nút (Trước/Sau) */
+.pagination-button {
+  padding: 0.5rem 1rem; /* Padding cho nút */
+  border: 1px solid #d1d5db; /* Viền xám nhạt */
+  border-radius: 0.375rem; /* Bo góc, tương đương rounded-md */
+  background-color: #ffffff; /* Màu nền trắng */
+  color: #374151; /* Màu chữ xám đậm */
+  cursor: pointer; /* Con trỏ chuột dạng pointer */
+  transition: all 0.2s ease; /* Hiệu ứng chuyển đổi mượt mà */
+}
+
+/* Style khi nút được hover */
+.pagination-button:hover:not(:disabled) {
+  background-color: #f3f4f6; /* Màu nền xám nhạt khi hover */
+  border-color: #9ca3af; /* Viền đậm hơn khi hover */
+}
+
+/* Style khi nút bị disabled */
+.pagination-button:disabled {
+  background-color: #e5e7eb; /* Màu nền xám nhạt */
+  color: #9ca3af; /* Màu chữ xám nhạt */
+  cursor: not-allowed; /* Con trỏ chuột dạng không cho phép */
+  opacity: 0.6; /* Độ mờ khi bị disabled */
+}
+
+/* Style cho phần thông tin trang */
+.pagination-info {
+  font-size: 1rem; /* Kích thước chữ */
+  color: #374151; /* Màu chữ xám đậm */
+  padding: 0.5rem; /* Padding cho phần thông tin */
+}

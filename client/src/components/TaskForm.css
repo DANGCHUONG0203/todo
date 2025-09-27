@@ -1,0 +1,79 @@
+/* TaskForm.css */
+
+/* --- Container Form (Thay thế: mb-4 flex gap-2) --- */
+.task-form-container {
+    display: flex;
+    gap: 12px; /* Khoảng cách giữa các input (tăng nhẹ từ gap-2) */
+    margin-bottom: 20px; /* Khoảng cách dưới (tăng nhẹ từ mb-4) */
+    padding: 15px 20px; /* Thêm padding nhẹ nếu cần làm nổi bật form */
+    background-color: #fffdfd;
+    border-radius: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    margin-bottom: 30px; /* Tăng khoảng cách dưới để tách biệt hơn */   
+}
+
+/* --- Input Chung (Thay thế: border p-2) --- */
+.task-input {
+    border: 1px solid #d1d5db;
+    padding: 10px 12px; /* Tăng padding nhẹ cho dễ bấm */
+    border-radius: 100px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: #ffffff;
+}
+
+.task-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+    outline: none;
+}
+
+/* Input Tiêu đề - Cho phép mở rộng */
+.task-input-title {
+    flex-grow: 1; /* Cho phép input tiêu đề chiếm hết không gian còn lại */
+}
+
+/* Select Box */
+.task-select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M9.293 12.95l.707.707L15 9.293l-1.414-1.414L10 10.586 6.414 7.172 5 8.586l4.293 4.364z'/%3E%3C/svg%3E"); /* Thêm icon mũi tên */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-weight: 530;
+}
+
+/* --- Nút Thêm (Thay thế: bg-blue-500 text-white px-4 py-2 rounded) --- */
+.task-add-btn {
+    background-color: #3b82f6; /* Xanh dương */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+    white-space: nowrap; /* Ngăn nút bị xuống dòng */
+}
+
+.task-add-btn:hover {
+    background-color: #2563eb;
+}
+
+/* --- Responsive cho màn hình nhỏ --- */
+@media (max-width: 768px) {
+    .task-form-container {
+        flex-direction: column; /* Chuyển thành bố cục cột */
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .task-input,
+    .task-select,
+    .task-add-btn {
+        width: 0%; /* Chiếm toàn bộ chiều rộng */
+    }
+}

@@ -1,0 +1,80 @@
+/* TaskEditForm.css */
+
+/* --- Container Form (Thay thế: mb-4 flex gap-2) --- */
+.task-edit-form-container {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fffde7; /* Nền vàng nhạt để làm nổi bật form chỉnh sửa */
+    border: 1px solid #ffcc00;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    
+}
+
+/* --- Input/Select Chung (Thay thế: border p-2) --- */
+.edit-input {
+    border: 1px solid #90c78c;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #fafcfb;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.edit-input:focus {
+    border-color: #ff9900; /* Màu cam khi focus */
+    box-shadow: 0 0 0 2px rgba(255, 153, 0, 0.3);
+    outline: none;
+}
+
+/* Input Tiêu đề - Cho phép mở rộng */
+.edit-input-title {
+    flex-grow: 1;
+}
+
+/* --- Nút Chung (Thay thế: px-4 py-2 rounded) --- */
+.edit-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    color: white;
+    transition: background-color 0.2s ease;
+    white-space: nowrap; /* Ngăn nút bị xuống dòng */
+}
+
+/* Nút Lưu (Thay thế: bg-green-500) */
+.save-btn {
+    background-color: #10b981; /* Xanh lá */
+}
+
+.save-btn:hover {
+    background-color: #059669;
+}
+
+/* Nút Hủy (Thay thế: bg-gray-400) */
+.cancel-btn {
+    background-color: #9ca3af; /* Xám */
+}
+
+.cancel-btn:hover {
+    background-color: #6b7280;
+}
+
+/* --- Responsive cho màn hình nhỏ --- */
+@media (max-width: 768px) {
+    .task-edit-form-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .edit-input,
+    .edit-btn {
+        width: 100%;
+    }
+}

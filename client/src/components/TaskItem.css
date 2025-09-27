@@ -1,0 +1,160 @@
+/* TaskItem.css */
+
+/* --- Container Chính --- */
+.task-item {
+    display: flex; /* Sắp xếp nội dung và nút hành động trên cùng một hàng */
+    justify-content: space-between; /* Đẩy nội dung và nút hành động ra hai bên */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    background-color: #ffffff; /* Nền trắng */
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Bóng nhẹ */
+    transition: box-shadow 0.3s ease;
+}
+
+.task-item:hover {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Tiêu đề và Thông tin --- */
+.task-item > div:first-child {
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Cho phép phần nội dung chiếm không gian còn lại */
+}
+
+.task-title {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600; /* Tiêu đề đậm hơn */
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: #333333;
+    /* Giới hạn độ dài tiêu đề nếu cần */
+    max-width: 400px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* --- Trạng thái (Select) --- */
+.task-status {
+    padding: 8px 12px;
+    margin-right: 15px;
+    border: 2px solid #e2e8f0;
+    border-radius: 100px;
+    font-size: 1.1rem;
+    font-weight:600;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ffffff, #f8fafc);
+    color: #4fc030;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+ 
+}
+
+.task-status:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-color: #cbd5e0;
+}
+
+.task-status:focus {
+    outline: none;
+    border-color: #535b7f;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.25);
+}
+
+/* Màu theo trạng thái */
+.task-status[value="completed"] {
+    border-color: #48bb78;
+    background: linear-gradient(135deg, #f0fff4, #c6f6d5);
+    color: #2f855a;
+}
+
+.task-status[value="in-progress"] {
+    border-color: #ed8936;
+    background: linear-gradient(135deg, #fffaf0, #fbd38d);
+    color: #c05621;
+}
+
+.task-status[value="pending"] {
+    border-color: #4299e1;
+    background: linear-gradient(135deg, #ebf8ff, #bee3f8);
+    color: #2b6cb0;
+}
+.task-info {
+  display: flex; 
+  align-items: center; 
+  flex-grow: 1; 
+  /* Dùng gap để tạo khoảng cách tự động và ổn định giữa các item */
+  gap: 15px; 
+}
+/* Example for TaskItem.css */
+.task-date {
+    /* Quan trọng: Chỉ dùng margin-left: auto để đẩy nó về phía bên phải 
+       và tạo ra một cột ngày tháng rõ ràng. */
+    margin-left: auto; 
+    margin-right: 20px; /* Khoảng cách với nút Hành động */
+    
+    /* Đảm bảo nó không bị xuống dòng */
+    white-space: nowrap; 
+    font-size: 1.4rem; /* Tăng kích thước font cho dễ nhìn hơn */
+    color: #4a5568; /* Màu tối hơn */
+    
+    /* Đặt chiều rộng tối thiểu để tạo không gian cố định */
+    min-width: 90px; 
+    
+    /* Căn nội dung ngày tháng ra giữa trong phạm vi 90px này */
+    text-align: center; 
+    
+    /* Loại bỏ padding: 0 10px; không cần thiết nữa */
+}
+/* Có thể tùy chỉnh màu nền select theo trạng thái để trực quan hơn */
+.task-item select[value="completed"] {
+    border-color: #10b981; /* Xanh lá cây */
+    background-color: #d1fae5;
+    color: #065f46;
+}
+
+.task-item select[value="in-progress"] {
+    border-color: #f59e0b; /* Vàng */
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+/* --- Nút Hành động --- */
+.task-actions {
+    display: flex;
+    gap: 15px;
+     /* Khoảng cách giữa các nút */
+}
+
+.task-actions button {
+    padding: 10px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.edit-btn {
+    background-color: #3b82f6; /* Xanh dương */
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #2563eb;
+}
+
+.delete-btn {
+    background-color: #ef4444; /* Đỏ */
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #dc2626;
+}
